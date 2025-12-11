@@ -28,3 +28,18 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 ```
+## Start Docker and run the app
+
+1. Make sure Docker Desktop is running.
+2. In VS Code terminal, with the virtualenv active, run:
+
+```
+python app.py
+
+```
+You should see Flask listening on port 5000:
+
+```
+Running on http://0.0.0.0:5000
+
+```
