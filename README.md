@@ -28,21 +28,18 @@ Create & activate virtualenv;
 python3 -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-
 ```
 
 **Install Flask:**
 
 ```
 pip install flask
-
 ```
 
 **To check installation:**
 
 ```
 pip show flask
-
 ```
 
 ## Start Docker and run the app
@@ -52,13 +49,11 @@ pip show flask
 
 ```
 python app.py
-
 ```
 You should see Flask listening on port 5000:
 
 ```
 Running on http://0.0.0.0:5000
-
 ```
 
 ## Test the API:
@@ -69,7 +64,6 @@ Running on http://0.0.0.0:5000
 
 ```
 http://localhost:5000
-
 ```
 
 - Type code and click Run. Output will appear below.
@@ -80,21 +74,18 @@ http://localhost:5000
 curl -s -X POST http://localhost:5000/run \
   -H "Content-Type: application/json" \
   -d '{"code":"print(2+2)"}' | jq
-
 ```
 
 **curl (Windows CMD)**
 
 ```
 curl -s -X POST http://localhost:5000/run -H "Content-Type: application/json" -d "{\"code\":\"print(2+2)\"}"
-
 ```
 
 **Postman**
 
 ```
 POST http://localhost:5000/run with JSON body: { "code": "for i in range(3): print(i)" }
-
 ```
 
 ## Test safety features (examples)
