@@ -118,3 +118,12 @@ print("done")
 ```
 
 - Expect: container killed or OOM error (returned as stderr/exit code)
+
+**Network blocking**
+
+```
+import socket
+socket.gethostbyname("example.com")
+
+```
+- Expect: network error due to --network none
