@@ -1,5 +1,7 @@
 # safe-code-executor
 
+This is a safe code executor project that runs untrusted Python code safely using Docker.
+
 ## Project Structure
 
 safe-code-executor/
