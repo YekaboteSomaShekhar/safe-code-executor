@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ```
 
-- **install Flask:**
+**Install Flask:**
 
 ```
 pip install flask
