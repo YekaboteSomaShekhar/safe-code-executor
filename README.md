@@ -104,7 +104,6 @@ POST http://localhost:5000/run with JSON body: { "code": "for i in range(3): pri
 ```
 while True:
     pass
-
 ```
 
 - Expect: Execution timed out after 10 seconds
@@ -114,7 +113,6 @@ while True:
 ```
 x = "a" * 1000000000
 print("done")
-
 ```
 
 - Expect: container killed or OOM error (returned as stderr/exit code)
