@@ -1,22 +1,22 @@
 # safe-code-executor
 
-This is a safe code executor project that runs untrusted Python code safely using Docker.
+A secure, containerized Python code execution API built with Flask and Docker. Users can submit Python code through an API or simple web UI, and the application executes it inside an isolated Docker container with strict safety limits.
 
 ## Project Structure
 
 safe-code-executor/
 
-├── app.py
+├── app.py                         # Flask API
 
-├── run_in_docker.py   
+├── run_in_docker.py               # Docker execution helper
 
-├── requirements.txt
+├── requirements.txt               # Python dependencies
 
 ├── .gitignore
 
 └── static/
 
-    └── index.html
+    └── index.html                 # Simple Web UI
 
 ## How to run locally
 
@@ -131,3 +131,29 @@ import socket
 socket.gethostbyname("example.com")
 ```
 - Expect: network error due to --network none
+
+**Write to FS test**
+
+```
+with open('/tmp/test.txt','w') as f:
+    f.write('hello')
+print("wrote")
+```
+- Expect: OSError when --read-only is set
+
+## Troubleshooting
+
+**Browser shows "127.0.0.1 refused to connect"**
+- Make sure Flask is still running (terminal must remain open)
+- Check with:
+
+```
+netstat -ano | findstr ":5000"
+```
+
+**Docker permission errors**
+- Run Docker Desktop as Administrator.
+
+## Conclusion
+
+The Safe Code Executor project shows how to securely run untrusted Python code using Docker and Flask. By applying timeouts, memory limits, network isolation, and read-only filesystems, it demonstrates practical techniques for sandboxing code and preventing harmful behavior. This project provides a solid foundation for understanding execution security and can be extended with more languages, features, or UI improvements.
