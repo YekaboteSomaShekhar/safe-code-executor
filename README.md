@@ -58,3 +58,61 @@ You should see Flask listening on port 5000:
 Running on http://0.0.0.0:5000
 
 ```
+
+## Test the API:
+
+**Open the web UI**
+
+- In your browser visit:
+
+```
+http://localhost:5000
+
+```
+
+- Type code and click Run. Output will appear below.
+
+**curl (Linux/macOS)**
+
+```
+curl -s -X POST http://localhost:5000/run \
+  -H "Content-Type: application/json" \
+  -d '{"code":"print(2+2)"}' | jq
+
+```
+
+**curl (Windows CMD)**
+
+```
+curl -s -X POST http://localhost:5000/run -H "Content-Type: application/json" -d "{\"code\":\"print(2+2)\"}"
+
+```
+
+**Postman**
+
+```
+POST http://localhost:5000/run with JSON body: { "code": "for i in range(3): print(i)" }
+
+```
+
+## Test safety features (examples)
+
+**Infinite loop**
+
+```
+while True:
+    pass
+
+```
+
+- Expect: Execution timed out after 10 seconds
+
+**Memory bomb**
+
+```
+x = "a" * 1000000000
+print("done")
+
+```
+
+- Expect: container killed or OOM error (returned as stderr/exit code)
