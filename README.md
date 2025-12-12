@@ -36,6 +36,13 @@ pip install flask
 
 ```
 
+**To check installation:**
+
+```
+pip show flask
+
+```
+
 ## Start Docker and run the app
 
 1. Make sure Docker Desktop is running.
