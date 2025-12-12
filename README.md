@@ -55,6 +55,9 @@ You should see Flask listening on port 5000:
 ```
 Running on http://0.0.0.0:5000
 ```
+<img width="1414" height="918" alt="Screenshot 2025-12-13 004305" src="https://github.com/user-attachments/assets/602986f8-5263-4f65-943e-2e1af20f24be" />
+
+<img width="1465" height="929" alt="Screenshot 2025-12-13 002126" src="https://github.com/user-attachments/assets/69e6a7c6-b067-46a4-9c0c-5e38316f5d45" />
 
 ## Test the API:
 
@@ -67,6 +70,13 @@ http://localhost:5000
 ```
 
 - Type code and click Run. Output will appear below.
+
+**Web UI**
+
+<img width="977" height="635" alt="Screenshot 2025-12-13 001302" src="https://github.com/user-attachments/assets/4a107aed-b9c6-4ff8-ac59-cd60710d320e" />
+
+<img width="1046" height="760" alt="Screenshot 2025-12-13 001707" src="https://github.com/user-attachments/assets/c8690f40-134a-4a49-8e00-dda496e4ad70" />
+
 
 **curl (Linux/macOS)**
 
@@ -98,6 +108,7 @@ while True:
 ```
 
 - Expect: Execution timed out after 10 seconds
+<img width="946" height="616" alt="Screenshot 2025-12-13 002747" src="https://github.com/user-attachments/assets/45171e27-9a73-44df-836e-85a4caa72af0" />
 
 **Memory bomb**
 
@@ -107,6 +118,7 @@ print("done")
 ```
 
 - Expect: container killed or OOM error (returned as stderr/exit code)
+<img width="962" height="605" alt="Screenshot 2025-12-13 003232" src="https://github.com/user-attachments/assets/16f8b2b2-2c52-4e22-8b1f-ff5d9175da17" />
 
 **Network blocking**
 
