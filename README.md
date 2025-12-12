@@ -73,7 +73,11 @@ http://localhost:5000
 
 **Web UI**
 
+- To print "Hello World".
+
 <img width="977" height="635" alt="Screenshot 2025-12-13 001302" src="https://github.com/user-attachments/assets/4a107aed-b9c6-4ff8-ac59-cd60710d320e" />
+
+- To print numbers from 1 to 10 using range().
 
 <img width="1046" height="760" alt="Screenshot 2025-12-13 001707" src="https://github.com/user-attachments/assets/c8690f40-134a-4a49-8e00-dda496e4ad70" />
 
