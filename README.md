@@ -154,6 +154,18 @@ netstat -ano | findstr ":5000"
 **Docker permission errors**
 - Run Docker Desktop as Administrator.
 
+**PowerShell: script execution blocked**
+- Run:
+```
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+```
+
+**curl errors in PowerShell**
+- Use PowerShell-native:
+```
+Invoke-RestMethod ...
+```
+
 ## Conclusion
 
 The Safe Code Executor project shows how to securely run untrusted Python code using Docker and Flask. By applying timeouts, memory limits, network isolation, and read-only filesystems, it demonstrates practical techniques for sandboxing code and preventing harmful behavior. This project provides a solid foundation for understanding execution security and can be extended with more languages, features, or UI improvements.
