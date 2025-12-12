@@ -124,6 +124,5 @@ print("done")
 ```
 import socket
 socket.gethostbyname("example.com")
-
 ```
 - Expect: network error due to --network none
